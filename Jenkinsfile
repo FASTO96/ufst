@@ -14,7 +14,7 @@ node {
                         sh "git config user.email s2x@alcda.com"
                         sh "git config user.name mak2"
                         sh 'cat yaml/and.yaml'
-                        sh    "sed -i 's/prg3.*:/prg3:${DOCKERTAG2}/g' yaml/and.yaml"
+                        sh    "sed -i 's/prg3.*/prg3:${DOCKERTAG2}/g' yaml/and.yaml"
                         sh 'cat yaml/and.yaml'
                         sh "git add ."
                         sh "git commit -m 'X ${env.BUILD_NUMBER}'"
